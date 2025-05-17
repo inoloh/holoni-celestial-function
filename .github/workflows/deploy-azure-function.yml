@@ -40,5 +40,4 @@ jobs:
 
     - name: Deploy Azure Function
       run: |
-        cd dist
         func azure functionapp publish ${{ secrets.AZURE_FUNCTIONAPP_NAME }} --javascript
