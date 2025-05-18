@@ -77,6 +77,7 @@ export async function getArtImages(
 
       const blobUrl = `${containerClient.url}/${blob.name}?${sasToken}`;
       results.push({
+        id: metadata?.Id,
         url: blobUrl,
         title: metadata?.Title,
         description: metadata?.Description,

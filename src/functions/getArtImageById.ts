@@ -54,6 +54,7 @@ export async function getArtImageById(request: HttpRequest, context: InvocationC
     return {
       status: 200,
       jsonBody: {
+        id: matchedEntity.Id,
         url: blobUrl,
         title: matchedEntity.Title,
         description: matchedEntity.Description,
