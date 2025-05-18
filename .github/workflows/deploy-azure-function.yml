@@ -40,4 +40,4 @@ jobs:
 
     - name: Deploy Azure Function
       run: |
-        func azure functionapp publish ${{ secrets.AZURE_FUNCTIONAPP_NAME }}
+        func azure functionapp publish ${{ secrets.AZURE_FUNCTIONAPP_NAME }} --javascript
