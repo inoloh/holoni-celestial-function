@@ -20,7 +20,7 @@ const blobAccountUrl = `https://${accountName}.blob.core.windows.net`;
 const tableAccountUrl = `https://${accountName}.table.core.windows.net`;
 const tableName = process.env["TABLE_NAME"];
 
-export async function getArtImages(
+export async function getAllArtworks(
   request: HttpRequest,
   context: InvocationContext
 ): Promise<HttpResponseInit> {
@@ -101,8 +101,8 @@ export async function getArtImages(
   }
 }
 
-app.http("getArtImages", {
+app.http("getAllArtworks", {
   methods: ["GET"],
   authLevel: "function",
-  handler: getArtImages,
+  handler: getAllArtworks,
 });

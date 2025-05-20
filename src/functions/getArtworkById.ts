@@ -9,7 +9,7 @@ const blobAccountUrl = `https://${accountName}.blob.core.windows.net`;
 const tableAccountUrl = `https://${accountName}.table.core.windows.net`;
 const tableName = process.env["TABLE_NAME"];
 
-export async function getArtImageById(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
+export async function getArtworkById(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     const id = request.params.id;
 
   if (!id) {
@@ -72,9 +72,9 @@ export async function getArtImageById(request: HttpRequest, context: InvocationC
   }
 };
 
-app.http('getArtImageById', {
+app.http('getArtworkById', {
     route: 'art/{id}',
     methods: ['GET'],
     authLevel: 'function',
-    handler: getArtImageById
+    handler: getArtworkById
 });
