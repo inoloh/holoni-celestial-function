@@ -29,7 +29,7 @@ export async function getAssetByName(request: HttpRequest, context: InvocationCo
       status: 200,
       jsonBody: {
         name: blobName,
-        url,
+        url: url,
       },
     };
   } catch (error: any) {
