@@ -101,7 +101,7 @@ export async function getAllArtworks(
   }
 }
 
-app.http("getAllArtworks", {
+app.http("art", {
   methods: ["GET"],
   authLevel: "function",
   handler: getAllArtworks,
