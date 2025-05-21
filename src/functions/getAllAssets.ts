@@ -6,7 +6,7 @@ const accountName = process.env["AZURE_STORAGE_ACCOUNT_NAME"];
 const accountKey = process.env["AZURE_STORAGE_ACCOUNT_KEY"];
 const blobAccountUrl = `https://${accountName}.blob.core.windows.net`;
 
-export async function getAssets(
+export async function getAllAssets(
   request: HttpRequest,
   context: InvocationContext
 ): Promise<HttpResponseInit> {
@@ -44,5 +44,5 @@ export async function getAssets(
 app.http("/assets", {
   methods: ["GET"],
   authLevel: "anonymous",
-  handler: getAssets,
+  handler: getAllAssets,
 });
