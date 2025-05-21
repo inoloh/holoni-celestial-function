@@ -42,7 +42,7 @@ export async function getAssetByName(request: HttpRequest, context: InvocationCo
 };
 
 app.http('getAssetByName', {
-    route: "/assets/{name}",
+    route: "assets/{name}",
     methods: ['GET'],
     authLevel: 'anonymous',
     handler: getAssetByName

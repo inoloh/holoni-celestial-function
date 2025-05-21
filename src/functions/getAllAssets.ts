@@ -41,7 +41,7 @@ export async function getAllAssets(
   }
 }
 
-app.http("/assets", {
+app.http("assets", {
   methods: ["GET"],
   authLevel: "anonymous",
   handler: getAllAssets,
